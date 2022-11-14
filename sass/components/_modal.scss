@@ -1,0 +1,74 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $backdrop-background;
+    opacity: 1;
+    transition: opacity $transition-function, visibility $transition-function;
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 450px;
+    height: 609px;
+    padding: 40px;
+    background-color: $prymary-background;
+    box-shadow: $box-shadow-modal;
+    border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $transition-function;
+
+    @media screen and (min-width:1200px) {
+        width: 528px;
+            height: 581px;
+    }
+}
+
+.modal__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $title-color;
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.backdrop.is-hidden.modal {
+    transform: translate(-50%, -50%) scale(0.7);
+}
+
+.button-close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $prymary-background;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: fill $transition-function;
+    padding: 0;
+
+    &:hover,
+    &:focus {
+        fill: $button-hero-accent-background;
+    }
+}

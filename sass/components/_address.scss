@@ -1,0 +1,41 @@
+.address {
+    margin-bottom: 60px;
+
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-right: 70px;
+        margin-bottom: 0;
+    }
+
+}
+
+.address__list {
+    @include list;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.address__item {
+    margin-bottom: 9px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.address__link {
+    @include link;
+    color: $adress-color;
+    transition: $transition-function;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+}

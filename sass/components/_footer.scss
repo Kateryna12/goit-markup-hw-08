@@ -1,0 +1,82 @@
+.footer {
+    background-color: $hero-background;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+}
+
+.footer__container {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        padding-left: 76px;
+        padding-right: 89px;
+
+    }
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        align-items: baseline;
+    }
+}
+
+.footer__contacts {
+    @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+.footer__logo {
+    margin-bottom: 20px;
+    display: block;
+
+    &--accent {
+        color: $color-white;
+    }
+}
+
+.footer-socnetworks {
+    margin-bottom: 60px;
+
+    @media screen and (min-width:768px) and (max-width:1199px) {
+        margin-bottom: 102px;
+        margin-right: 0;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 0;
+    }
+}
+
+.footer-socnetworks__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $color-white;
+    margin-bottom: 20px;
+
+    @media screen and (max-width:1199px) {
+        text-align: center;
+    }
+}
+
+.footer-socnetworks__list {
+    @include list;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.footer-socnetworks__link {
+    @include link;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.socnetworks__icon-footer.socnetworks__icon {
+    fill: $color-white;
+}

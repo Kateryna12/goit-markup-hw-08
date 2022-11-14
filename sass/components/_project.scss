@@ -1,0 +1,28 @@
+.project__list {
+    @include list;
+    @media screen and (min-width:768px){
+        display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+    }
+}
+
+.project__item {
+    display: flex;
+        flex-direction: column;
+    margin-bottom: 30px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+    @media screen and (min-width:768px) {
+            flex-basis: calc((100% - 30px) / 32);
+            margin-bottom: 0;
+        }
+    @media screen and (min-width:1200px) {
+            flex-basis: calc((100% - 60px) / 3);
+            margin-bottom: 0;
+        }
+    &:hover {
+            box-shadow: $box-shadow-project;
+        }
+}
